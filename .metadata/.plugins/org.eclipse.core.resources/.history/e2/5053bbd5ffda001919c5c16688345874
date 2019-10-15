@@ -1,0 +1,23 @@
+package com.hexa.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HexaController {
+
+	@RequestMapping(value =  "home.htm")
+	public String displayHome() {
+		return "Home";
+	}
+	
+	@RequestMapping(value =  "tasfrm.htm")
+	public String displayTaxForm() {
+		return "Home";
+	}
+	
+	@RequestMapping(value =  "home.htm")
+	public String processTaxForm() {
+		return "Home";
+	}
+}

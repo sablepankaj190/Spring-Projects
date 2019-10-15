@@ -1,0 +1,10 @@
+package com.hexa.dao;
+
+import com.hexa.entity.Account;
+
+public interface IAccountDao {
+	
+	public Account getAccount(int aid);
+	
+
+}

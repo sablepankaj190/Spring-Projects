@@ -1,0 +1,18 @@
+package com.hexa.service;
+
+import org.springframework.stereotype.Component;
+
+@Component("myservice")
+public class SerImpl implements Iser{
+
+	
+	private double inr;
+	
+
+	@Override
+	public double convertToINR(double dollar) {
+		double in = this.inr * dollar;
+		return in;
+	}
+
+}

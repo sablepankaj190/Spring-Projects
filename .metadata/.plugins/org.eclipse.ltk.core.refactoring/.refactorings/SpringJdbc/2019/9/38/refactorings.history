@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;SpringMvcDemo/src&apos;&#x0D;&#x0A;- Original project: &apos;SpringJdbc&apos;&#x0D;&#x0A;- Destination element: &apos;SpringMvcDemo/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     SpringJdbc/src/com.hexa.entity&#x0D;&#x0A;     SpringJdbc/src/com.hexa.dao" description="Copy packages" destination="=SpringMvcDemo/src" element1="/src&lt;com.hexa.entity" element2="/src&lt;com.hexa.dao" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1568917005873" version="1.0"/>
+</session>

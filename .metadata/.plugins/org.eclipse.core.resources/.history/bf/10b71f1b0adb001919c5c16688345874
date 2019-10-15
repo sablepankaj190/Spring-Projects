@@ -1,0 +1,20 @@
+package com.hexa.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.hexa.dao.IDao;
+
+@Controller
+public class EmpController {
+
+	@Autowired
+	private IDao dao;
+	
+	@RequestMapping(value ="viewAll.htm")
+	public String displayHome() {
+		return "Home";
+	}
+	
+}

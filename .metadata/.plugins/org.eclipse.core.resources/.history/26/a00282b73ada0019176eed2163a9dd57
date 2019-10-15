@@ -1,0 +1,40 @@
+package com.hexa.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository("mydao")
+public class DaoImpl implements IDao{
+
+	
+	@Autowired
+	private JdbcTemplate jt;
+	
+	
+	@Override
+	public int editEmployee(int eid, double sal) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Map<String, Object> getEmployee(int eid) {
+		String sql = "select * from hexa_employee where emp_id = ?";
+		Object[] params = {eid};
+		Map<String, Object> row = jt.queryForMap(sql);
+		return row;
+	}
+
+	@Override
+	public List<Map<String, Object>> getEmployee(String branch) {
+		String sql = "select * from hexa_employee where emp_dept = ?";
+		Object[] params = {branch};
+		List<Map<String, Object>> lst = jt.queryForMap(sql);
+		return lst;
+	}
+
+}

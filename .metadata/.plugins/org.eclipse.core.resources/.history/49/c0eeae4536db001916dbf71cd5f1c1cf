@@ -1,0 +1,39 @@
+package com.hexa.web;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.hexa.dao.IEmpDao;
+import com.hexa.entity.Emp;
+
+@RestController
+public class EmpRestWS {
+
+	@Autowired
+	private IEmpDao dao;
+
+	@RequestMapping(value = "byid/{eid}", method = RequestMethod.GET)
+	public Emp viewEmpById(@PathVariable("eid") int empId) {
+		Emp emp = dao.getEmployee(empId);
+		return emp;
+	}
+	
+	@RequestMapping(value = "bydept", method = RequestMethod.GET)
+	public List<Emp> viewEmpById(@RequestParam("dname") String dept) {
+		List<Emp> emp = dao.getEmployee(dept);
+		return emp;
+	}
+	
+	@RequestMapping(value = "byid/{eid}", method = RequestMethod.GET)
+	public Emp addEmployee(@PathVariable("eid") int empId) {
+		Emp emp = dao.getEmployee(empId);
+		return emp;
+	}
+
+}

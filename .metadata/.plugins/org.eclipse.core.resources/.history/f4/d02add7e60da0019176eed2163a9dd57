@@ -1,0 +1,16 @@
+package com.hexa.client;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Client {
+
+	static ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+	public static void main(String[] args) {
+
+		
+
+	}
+
+}

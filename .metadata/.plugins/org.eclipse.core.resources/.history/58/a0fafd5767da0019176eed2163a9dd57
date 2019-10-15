@@ -1,0 +1,23 @@
+package com.hexa.client;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.hexa.service.ISer;
+
+public class Client {
+static ApplicationContext ctx = new AnnotationConfigApplicationContext(JpaConfig.class);
+	public static void main(String[] args) {
+		ISer ser = ctx.getBean("aservice", ISer.class);
+		
+		try {
+			System.out.println(ser.getAccount(1001));
+			System.out.println(ser.getAccount(1002));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+				
+		
+	}
+
+}

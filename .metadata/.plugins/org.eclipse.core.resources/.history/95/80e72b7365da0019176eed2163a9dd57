@@ -1,0 +1,25 @@
+package com.hexa.dao;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.hexa.entity.Account;
+import com.hexa.exceptions.IDException;
+
+@Repository("adao")
+@Transactional
+public class AccountDaoImpl implements IAccountDao{
+
+	@Override
+	public Account getAccount(int aid) throws IDException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int updateAccount(Account acc) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

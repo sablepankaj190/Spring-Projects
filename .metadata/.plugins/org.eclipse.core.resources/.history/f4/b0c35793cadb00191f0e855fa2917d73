@@ -1,0 +1,23 @@
+package com.hexa.demos;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.web.client.RestTemplate;
+
+import com.hexa.entity.Emp;
+
+public class AddEmployee {
+
+	public static void main(String[] args) {
+
+		RestTemplate rt=new RestTemplate();
+		String url = "http://172.25.229.80:8080/add";
+		Emp emp = new Emp(2017, "Naik", 69, "Production Support", LocalDate.of(2019, 9, 30));
+		String res = rt.postForObject(url, emp, String.class);
+		System.out.println(res);
+	
+	}
+
+}

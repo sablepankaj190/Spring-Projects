@@ -1,0 +1,37 @@
+<%@include file="Meta.jsp" %>
+<html>
+<%@include file="HeadSection.jsp" %>
+<body>
+<%@include file="Header.jsp" %>
+<article>
+  <h2>Employee Details</h2>
+  <c:if test="${param.dept ne null}">
+     <h3 align="center">Department: ${param.dept}</h3>
+  </c:if>
+  <table>
+   <thead>
+      <tr>
+        <th>Dept ID</th>
+        <th>Dept Comm</th>
+      </tr>
+   </thead>
+    <tbody>
+       <c:forEach items="${elist}" var="emp">
+           <tr>
+             <td>${emp.empId}</td>
+             <td>${emp.empName}</td>
+             <td>${emp.empSal}</td>
+             <td>${emp.dept}</td>
+             <td>${emp.doj}</td>
+             <td><a href="">edit</a></td>
+             <td><a href="">remove</a></td>
+           </tr>
+       </c:forEach>
+    
+    </tbody>
+  </table>
+</article>
+
+
+</body>
+</html>

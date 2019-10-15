@@ -1,0 +1,17 @@
+package com.hexa.entity;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class EmpMapper implements RowMapper<Emp>{
+
+	@Override
+	public Emp mapRow(ResultSet rs, int rowno) throws SQLException {
+		
+		Emp emp = new Emp(rs.getInt("emp_id"), ename, sal, dept, doj)
+		return null;
+	} 
+
+}

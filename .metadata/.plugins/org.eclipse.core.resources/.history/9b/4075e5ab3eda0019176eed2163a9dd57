@@ -1,0 +1,12 @@
+package com.hexa.entity;
+
+import java.time.LocalDate;
+
+public class Emp {
+
+	private int eid;
+	private String ename;
+	private double sal;
+	private String dept;
+	private LocalDate doj;
+}

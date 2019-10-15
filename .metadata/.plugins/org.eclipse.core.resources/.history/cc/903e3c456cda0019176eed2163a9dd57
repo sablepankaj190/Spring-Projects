@@ -1,0 +1,32 @@
+package com.hexa.client;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.hexa.exceptions.BalException;
+import com.hexa.exceptions.IDException;
+import com.hexa.service.ISer;
+
+public class Client {
+static ApplicationContext ctx = new AnnotationConfigApplicationContext(JpaConfig.class);
+	public static void main(String[] args) {
+		ISer ser = ctx.getBean("aservice", ISer.class);
+		
+		try {
+			System.out.println("Before Transaction : ");
+			System.out.println(ser.getAccount(1001));
+			System.out.println(ser.getAccount(1002));
+		    ser.transferFund(1002, 1001, 20000);
+            System.out.println("\nAfter Transaction : ");
+			System.out.println(ser.getAccount(1001));
+			System.out.println(ser.getAccount(1002));
+			
+		    
+		} catch (IDException  | BalException e) {
+			System.out.println(e.getMessage());
+			}
+				
+		
+	}
+
+}

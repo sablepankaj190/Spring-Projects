@@ -1,0 +1,20 @@
+package com.hexa.client;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.hexa.dao.IDao;
+
+public class ViewById {
+
+	static ApplicationContext ctx = new AnnotationConfigApplicationContext(JdbcConfig.class);
+	 
+	public static void main(String[] args) {
+
+		IDao dao = ctx.getBean("mydao", IDao.class)
+		 
+
+		
+	}
+
+}
